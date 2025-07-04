@@ -8,9 +8,8 @@ This app is a subunit of the larger TNBC Knowledge Graph (KG Genie) project. It 
 - Graph relationships: trial–drug–biomarker–outcome
 - Interactive visualizations with PyVis and Plotly
 - CSV export + image download support
-
-## 🚀 Live App
-🔗 [Open on Streamlit](https://tnbc-clinical-trial-subunit.streamlit.app)
+🔗 Live App: [Click to launch](https://tnbc-clinical-trials-kg-v1.streamlit.app)
+📁 Dataset: Included `tnbc_kg_triplets_chemical_biotech_other.csv`
 
 ## 📁 Files
 - `tnbc_clean.py` — Streamlit app
