@@ -1,42 +1,32 @@
-# 🧠 TNBC Clinical Trials Explorer (Knowledge Graph Subunit)
+# 🧬 TNBC Clinical Trials Knowledge Graph (v1)
 
-This is an interactive **Streamlit application** for exploring clinical trials related to **Triple-Negative Breast Cancer (TNBC)** using **Knowledge Graph (KG)** visualizations.
+This app is a subunit of the larger TNBC Knowledge Graph (KG Genie) project. It allows users to explore biotech and chemical drugs in clinical trials, including biomarkers and relationships through an interactive knowledge graph.
 
-It is designed as a **modular subunit** for the larger [TNBC KG platform](https://kg-genie-ai-powered-knowledge-graph-for-cancer-research-evzhhj.streamlit.app/), and can be used standalone or integrated into more complex biomedical KG systems.
+## 🔍 Features
+- Clinical trials filtered by biotech/chemical/other drugs
+- Biomarker & pathway extraction
+- Graph relationships: trial–drug–biomarker–outcome
+- Interactive visualizations with PyVis and Plotly
+- CSV export + image download support
 
----
+## 🚀 Live App
+🔗 [Open on Streamlit](https://tnbc-clinical-trial-subunit.streamlit.app)
 
-## 🚀 Features
+## 📁 Files
+- `tnbc_clean.py` — Streamlit app
+- `tnbc_kg_triplets_chemical_biotech_other.csv` — Data used in the graph
+- `requirements.txt` — Python dependencies
 
-- 📊 Visualizes clinical trial relationships (biotech, chemical, other drugs)
-- 🧬 Extracts drug-target-biomarker-pathway relationships
-- 🧠 Displays knowledge graphs (Plotly + PyVis)
-- 📁 Categorizes drugs: Biotech, Chemical, Other
-- 🔍 Filters trials by drug type, biomarker, relation
-- 📦 Export graph views or data
+## 📊 Example Triplet Format
+| Source         | Relation       | Target      |
+|----------------|----------------|-------------|
+| BIOTECH_TRIAL:NCT123456 | TARGETS_PROTEIN | BRCA1       |
+| CHEMICAL_TRIAL:NCT654321 | MEASURES        | Response Rate |
 
----
-
-## 📂 Files in This Repo
-
-| File | Description |
-|------|-------------|
-| `tnbc_clean.py` | Main Streamlit app |
-| `tnbc_kg_triplets_chemical_biotech_other.csv` | Processed KG triplets from TNBC trial data |
-| `requirements.txt` | Python libraries needed to run the app |
-| `README.md` | This file |
-
----
-
-## ▶️ How to Run Locally
+## 🛠 How to Run Locally
 
 ```bash
-# Step 1: Clone the repo
-git clone https://github.com/your-username/tnbc-kg-app.git
-cd tnbc-kg-app
-
-# Step 2: Install dependencies
+git clone https://github.com/YourUser/tnbc-clinical-trial-subunit-app.git
+cd tnbc-clinical-trial-subunit-app
 pip install -r requirements.txt
-
-# Step 3: Run the Streamlit app
 streamlit run tnbc_clean.py
